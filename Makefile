@@ -1,5 +1,5 @@
 CC = g++
-TARGET = access static overloading contruct_order rule5
+TARGET = access static overloading contruct_order rule5 explicit
 
 all: $(TARGET)
 access:access.cpp
@@ -12,6 +12,8 @@ contruct_order: contruct_order.cpp
 	$(CC) $< -o $@
 rule5: rule5.cpp
 	$(CC) -g --std=c++11 $< -o $@
+explicit: explicit.cpp
+	$(CC) $< -o $@
 
 clean:
 	rm $(TARGET)

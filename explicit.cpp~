@@ -1,0 +1,15 @@
+#include <iostream>
+
+class MyClass {
+  MyClass(int a) { std::cout << "MyClass(int) is called" << std::endl; }
+};
+
+class MyFunction {
+  void dumass_func(MyClass mc) { std::cout << "dumacc_func is called" << std::endl; }
+};
+
+int main() {
+  MyClass mc(20);
+  MyFunction mf;
+  mf.dumass_func(mc);
+}
