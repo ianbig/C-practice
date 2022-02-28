@@ -1,6 +1,6 @@
 CC = g++
 
-TARGET = access static overloading contruct_order rule5 protected dispatch child_permiss abstract dynamic dynamic_c
+TARGET = access static overloading contruct_order rule5 protected dispatch child_permiss abstract dynamic dynamic_c excep exception raii
 
 
 all: $(TARGET)
@@ -28,5 +28,11 @@ dynamic: dynamic.cpp
 	$(CC) $< -o $@
 dynamic_c: dynamic.c
 	gcc -g $< -o $@
+excep: excep.cpp
+	$(CC) $< -o $@
+exception: exception.cpp
+	$(CC) $< -o $@
+raii: raii.cpp
+	$(CC) $< -o $@
 clean:
-	rm $(TARGET)
+	rm $(TARGET) *~
